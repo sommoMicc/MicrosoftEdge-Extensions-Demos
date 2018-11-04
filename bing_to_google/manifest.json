@@ -1,0 +1,22 @@
+{
+  "name": "Bing 2 Google",
+  "author": "Michele Tagliabue",
+  "description": "Redirects Bing search to Google",
+  "version": "1.0",
+  "icons": {
+    "25": "images/color-changer25.png",
+    "48": "images/color-changer48.png"
+  },
+  "permissions": [
+    "*://www.bing.com/*",
+    "*://www.google.com/*",
+    "tabs"
+  ], 
+  "content_scripts": [{
+    "matches": [
+        "*://www.bing.com/*"
+    ],
+    "js": ["js/content.js"],
+    "run_at": "document_start"
+  }]
+}
